@@ -14,19 +14,55 @@ Este pacote contém **6 demos estáticos** prontos para subir no **GitHub** e pu
 - Imagens **3D realistas** geradas e incluídas no layout.
 - Interações com o mouse (spotlight e tilt em cards/imagens).
 - Botão para **ativar música ambiente** via Web Audio API.
-- Aviso em todas as páginas informando que são **exemplos demonstrativos**, não sites reais.
+- Aviso em todas as páginas com a frase: **"Aviso: são exemplos, não são sites reais."**
 - Estrutura para ajudar na **venda do serviço** para o cliente final.
 - Site estático, sem dependências de build.
 
-## Publicar na Vercel
 
-1. Envie esta pasta para um repositório no GitHub.
-2. Importe o repositório na Vercel.
-3. Nas configurações, use:
-   - **Framework Preset:** Other
-   - **Build Command:** deixe vazio
-   - **Output Directory:** deixe vazio
-4. Publice.
+## Versão Vite
+
+Este pacote foi atualizado para funcionar como **aplicação Vite**.
+
+### Rodar localmente
+
+```bash
+npm install
+npm run dev
+```
+
+### Gerar build
+
+```bash
+npm run build
+```
+
+A pasta final será:
+
+```txt
+dist
+```
+
+### Publicar na Vercel
+
+Use estas configurações:
+
+```txt
+Framework Preset: Vite
+Install Command: npm install --no-audit --no-fund --legacy-peer-deps
+Build Command: npm run build
+Output Directory: dist
+Node.js Version: 20.x
+```
+
+O projeto usa Vite em modo multi-page app, mantendo as páginas:
+
+- /
+- /psicologia/
+- /imoveis/
+- /escola/
+- /restaurante-luxo/
+- /lanchonete/
+- /proposta-local/
 
 ## Personalização
 
@@ -40,3 +76,8 @@ Troque antes de usar comercialmente:
 ## Observação
 
 As imagens incluídas são conceituais/demonstrativas para apresentação comercial e podem ser substituídas por fotos reais do cliente quando necessário.
+
+
+## Aviso usado nas páginas
+
+Aviso: são exemplos, não são sites reais.
